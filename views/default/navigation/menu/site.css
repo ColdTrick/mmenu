@@ -1,0 +1,7 @@
+.elgg-page-topbar {
+	.elgg-menu-site-container,
+	.elgg-menu-topbar-container, 
+	.elgg-menu-footer-container {
+		display: none;
+	}
+}

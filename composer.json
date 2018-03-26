@@ -1,0 +1,28 @@
+{
+	"name": "coldtrick/mmenu",
+	"description": "Implements jQuery.mmenu in Elgg",
+	"type": "elgg-plugin",
+	"keywords": ["elgg", "plugin", "menu"],
+	"license": "GPL-2.0-only",
+	"support": {
+		"source": "https://github.com/ColdTrick/mmenu",
+		"issues": "https://github.com/ColdTrick/mmenu/issues"
+	},
+	"require": {
+		"composer/installers": "^1.0.8",
+		"jQuery.mmenu": "~7.0.0"
+	},
+	"require-dev": {
+		"coldtrick/sniffs": "dev-master",
+		"coldtrick/releases": "dev-master"
+	},
+	"conflict": {
+		"elgg/elgg": "<3.0"
+	},
+	 "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:frdh/jquery.mmenu.git"
+        }
+	]
+}
