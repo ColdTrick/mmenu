@@ -25,14 +25,30 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 			},
 			navbars: [
 				{
+					"position": "top",
+					"content": [
+						'<?php
+							$site = elgg_get_site_entity();
+							echo elgg_view('output/url', [
+								'href' => $site->getURL(),
+								'text' => $site->getDisplayName(),
+								'trusted' => true,
+							]);
+						?>'
+					]
+				},
+				{
 					"position": "bottom",
 					"content": [
 						$('.elgg-menu-footer').html()
-					]
+						]
 				}
 			]
 		}, {
 			// configuration
+			classNames: {
+				selected: 'elgg-state-selected'
+			},
 			offCanvas: {
 				pageSelector: '.elgg-page'
 			},

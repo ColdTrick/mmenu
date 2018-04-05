@@ -3,7 +3,6 @@
 elgg_load_css('jquery.mmenu/jquery.mmenu.all.css');
 elgg_require_js('navigation/menu/site');
 
-
 // we want css classes to use dashes
 $name = elgg_extract('name', $vars, '');
 

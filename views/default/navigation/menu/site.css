@@ -5,3 +5,45 @@
 		display: none;
 	}
 }
+
+.mm-listitem:after {
+	left: 0;
+}
+
+.elgg-menu-site-container {
+	li {
+		.elgg-anchor > * {
+			vertical-align: middle;
+		}
+	}
+	
+	.mm-navbars_top {
+		border-bottom-color: $(topbar-background-color, $(background-color-highlight));
+		background: $(topbar-background-color, $(background-color-highlight));
+			
+		.mm-navbar {
+			line-height: 35px;
+			height: 55px;
+			color: white;
+			
+			a {
+				color: white;
+			}
+		}
+	}
+	.mm-panels {
+		top: 55px;
+	}
+	
+	.mm-listview {
+		.elgg-avatar-small img,
+		li .elgg-anchor-icon {
+			width: 32px;
+			font-size: 25px;
+			display: inline-block;
+			text-align: center;
+		}	
+	}
+	
+	
+}

@@ -12,5 +12,7 @@ function mmenu_init() {
 	
 	elgg_register_plugin_hook_handler('register', 'menu:site', '\ColdTrick\Mmenu\Menus::topbarToSite');
 	
+	elgg_register_simplecache_view('navigation/menu/site.js');
+	
 	elgg_unregister_plugin_hook_handler('prepare', 'menu:site', '_elgg_site_menu_setup');
 }
