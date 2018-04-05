@@ -3,7 +3,7 @@
 	<name>Mmenu</name>
 	<author>ColdTrick IT Solutions</author>
 	<version>1.0</version>
-	<description>Manage your widgets</description>
+	<description>Replaces topbar site menu items with a mobile like sidebar menu</description>
 	<id>mmenu</id>
 	<website>http://www.coldtrick.com/</website>
 	<repository>https://github.com/ColdTrick/mmenu</repository>
