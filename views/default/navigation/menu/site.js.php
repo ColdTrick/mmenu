@@ -13,7 +13,7 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 			sidebar: {
 				collapsed: {
 					use: true,
-					size: 60
+					size: 40
 				},
 				expanded: {
 					use: true,

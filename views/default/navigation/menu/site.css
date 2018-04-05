@@ -38,11 +38,15 @@
 	.mm-listview {
 		.elgg-avatar-small img,
 		li .elgg-anchor-icon {
-			width: 32px;
-			font-size: 25px;
+			width: 20px;
 			display: inline-block;
 			text-align: center;
-		}	
+			margin-right: 5px;
+		}
+		
+		.mm-listitem a {
+			padding: 10px;
+		}
 	}
 	
 	
