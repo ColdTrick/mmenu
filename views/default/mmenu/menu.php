@@ -23,7 +23,7 @@ foreach ($vars['menu'] as $section) {
 	}
 	
 	$section_class = $class;
-	$section_class_selector = preg_replace('/[^a-z0-9\-]/i', '-', strtolower($section->all()));
+	$section_class_selector = preg_replace('/[^a-z0-9\-]/i', '-', strtolower($section->getID()));
 	$section_class[] = "elgg-menu-{$name_class_selector}-{$section_class_selector}";
 	
 	$menu_view .= elgg_view('mmenu/section', [
