@@ -43,7 +43,19 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 						$('.elgg-menu-footer').html()
 						]
 				}
-			]
+			],
+			hooks: {
+				'open:finish': function() {
+					setTimeout(function() {
+						$('#my-button > .elgg-icon').addClass('elgg-icon-times fa-times').removeClass('elgg-icon-bars fa-bars');
+					}, 100);
+				},
+				'close:finish': function() {
+					setTimeout(function() {
+						$('#my-button > .elgg-icon').removeClass('elgg-icon-times fa-times').addClass('elgg-icon-bars fa-bars');
+					}, 100);
+				}
+			}
 		}, {
 			// configuration
 			classNames: {
@@ -51,29 +63,11 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 			},
 			offCanvas: {
 				pageSelector: '.elgg-page'
-			},
+			}
 		});
 		
-		var menu = $menu_selector.data('mmenu');
-		var $toggle_button = $('#mmenu-toggle');
-		
-		
-		$toggle_button.click(function() {
-			menu.open();
-		});
-		
-		
-		
-		
-		menu.bind('open:finish', function() {
-			setTimeout(function() {
-				$('#my-button > .elgg-icon').addClass('elgg-icon-times fa-times').removeClass('elgg-icon-bars fa-bars');
-			}, 100);
-		});
-		menu.bind('close:finish', function() {
-			setTimeout(function() {
-				$('#my-button > .elgg-icon').removeClass('elgg-icon-times fa-times').addClass('elgg-icon-bars fa-bars');
-			}, 100);
+		$('#mmenu-toggle').click(function() {
+			$menu_selector.data('mmenu').open();
 		});
 	});
 });

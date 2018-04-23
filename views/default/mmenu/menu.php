@@ -1,5 +1,7 @@
 <?php
 
+use Elgg\Menu\MenuSection;
+
 elgg_load_css('jquery.mmenu/jquery.mmenu.all.css');
 elgg_require_js('navigation/menu/site');
 
@@ -15,15 +17,19 @@ $class = elgg_extract_class($vars, ["elgg-menu", "elgg-menu-{$name_class_selecto
 
 $menu_view = '';
 
-foreach ($vars['menu'] as $section => $menu_items) {
+foreach ($vars['menu'] as $section) {
+	if (!$section instanceof MenuSection) {
+		continue;
+	}
+	
 	$section_class = $class;
-	$section_class_selector = preg_replace('/[^a-z0-9\-]/i', '-', strtolower($section));
+	$section_class_selector = preg_replace('/[^a-z0-9\-]/i', '-', strtolower($section->all()));
 	$section_class[] = "elgg-menu-{$name_class_selector}-{$section_class_selector}";
 	
 	$menu_view .= elgg_view('mmenu/section', [
-		'items' => $menu_items,
+		'items' => $section->all(),
 		'class' => $section_class,
-		'section' => $section,
+		'section' => $section->getID(),
 		'name' => $name,
 		'show_section_headers' => $show_section_headers,
 		'item_class' => $item_class,
