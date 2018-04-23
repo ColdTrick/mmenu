@@ -1,5 +1,5 @@
 define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
-	$(document).ready(function() {
+	elgg.register_hook_handler('init', 'system', function() {
 		var $menu_selector = $('.elgg-menu-site-container');
 		
 		$menu_selector.mmenu({
