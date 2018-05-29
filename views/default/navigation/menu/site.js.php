@@ -51,9 +51,18 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 				pageSelector: '.elgg-page'
 			}
 		});
-				
+		
+		$(document).on('click', '.mm-menu__blocker', function() {
+			setTimeout(function() {
+				$menu_selector.trigger('mmenu.toggle');
+			}, 400);
+		});
+		
 		$(document).on('click', '.mmenu-toggle', function() {
 			$menu_selector.data('mmenu').close();
+			setTimeout(function() {
+				$menu_selector.trigger('mmenu.toggle');
+			}, 400);
 			
 			require(['elgg/Ajax'], function(Ajax) {
 				var ajax = new Ajax(false);
