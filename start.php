@@ -12,6 +12,9 @@ function mmenu_init() {
 	elgg_extend_view('elements/z-index.css', 'mmenu/z-index.css');
 	
 	elgg_register_plugin_hook_handler('register', 'menu:site', '\ColdTrick\Mmenu\Menus::topbarToSite');
+
+	elgg_register_plugin_hook_handler('view_vars', 'page/elements/html', '\ColdTrick\Mmenu\Views::addHtmlClasses');
+	elgg_register_plugin_hook_handler('view_vars', 'page/default', '\ColdTrick\Mmenu\Views::addPageClasses');
 	
 	elgg_register_simplecache_view('navigation/menu/site.js');
 	

@@ -5,6 +5,9 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 		$menu_selector.mmenu({
 			// options
 			drag: true,
+			navbar: {
+				title: '&nbsp;'
+			},
 			backButton: true,
 			setSelected: {
 				hover: true,
@@ -12,12 +15,12 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 			},
 			sidebar: {
 				collapsed: {
-					use: true,
+					use: "(min-width: 700px)",
 					size: 40
 				},
 				expanded: {
-					use: true,
-					size: 25,
+					use: "(min-width: 900px)",
+					size: 25
 				}
 			},
 			keyboardNavigation: {
@@ -28,12 +31,7 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 					"position": "top",
 					"content": [
 						'<?php
-							$site = elgg_get_site_entity();
-							echo elgg_view('output/url', [
-								'href' => $site->getURL(),
-								'text' => $site->getDisplayName(),
-								'trusted' => true,
-							]);
+							echo elgg_view('mmenu/topbar');
 						?>'
 					]
 				},
@@ -41,21 +39,9 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 					"position": "bottom",
 					"content": [
 						$('.elgg-menu-footer').html()
-						]
+					]
 				}
-			],
-			hooks: {
-				'open:finish': function() {
-					setTimeout(function() {
-						$('#my-button > .elgg-icon').addClass('elgg-icon-times fa-times').removeClass('elgg-icon-bars fa-bars');
-					}, 100);
-				},
-				'close:finish': function() {
-					setTimeout(function() {
-						$('#my-button > .elgg-icon').removeClass('elgg-icon-times fa-times').addClass('elgg-icon-bars fa-bars');
-					}, 100);
-				}
-			}
+			]
 		}, {
 			// configuration
 			classNames: {
@@ -65,9 +51,19 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 				pageSelector: '.elgg-page'
 			}
 		});
-		
-		$('#mmenu-toggle').click(function() {
-			$menu_selector.data('mmenu').open();
+				
+		$(document).on('click', '.mmenu-toggle', function() {
+			$menu_selector.data('mmenu').close();
+			
+			require(['elgg/Ajax'], function(Ajax) {
+				var ajax = new Ajax(false);
+				ajax.action('mmenu/save_menu_state', {
+					data: {
+						closed: $menu_selector.data('mmenu').getInstance().vars.opened ? 1 : 0
+					}
+				});
+			});
 		});
+		
 	});
 });

@@ -47,5 +47,6 @@ echo elgg_format_element('nav', [
 		"elgg-menu-{$name_class_selector}-container",
 	],
 	'data-menu-name' => $name,
+	'id' => 'elgg-mmenu',
 ], elgg_format_element('ul', [], $menu_view));
 

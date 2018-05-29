@@ -5,8 +5,8 @@
  */
 
 echo elgg_view('output/url', [
-	'id' => 'mmenu-toggle',
-	'href' => '#',
+	'class' => 'mmenu-toggle',
+	'href' => '#elgg-mmenu',
 	'text' => false,
 	'icon' => 'bars',
 ]);

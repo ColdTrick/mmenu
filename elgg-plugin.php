@@ -11,4 +11,7 @@ return [
 			'jquery.mmenu/' => $composer_path . 'vendor/jQuery.mmenu/dist',
 		],
 	],
+	'actions' => [
+		'mmenu/save_menu_state' => [],
+	],
 ];
