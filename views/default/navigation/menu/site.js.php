@@ -12,6 +12,10 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 				hover: true,
 				parent: true
 			},
+			iconPanels: {
+				add: true,
+				visible: "first"
+			},
 			sidebar: {
 				collapsed: {
 					use: "(min-width: 700px)",
