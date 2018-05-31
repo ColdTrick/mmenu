@@ -2,8 +2,7 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 	elgg.register_hook_handler('init', 'system', function() {
 		var $menu_selector = $('.elgg-menu-site-container');
 		
-		$menu_selector.mmenu({
-			// options
+		var options = elgg.trigger_hook('config:options', 'mmenu', {}, {
 			drag: true,
 			navbar: {
 				title: '&nbsp;'
@@ -39,8 +38,9 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 					]
 				}
 			]
-		}, {
-			// configuration
+		});
+		
+		var configuration = elgg.trigger_hook('config:configuration', 'mmenu', {}, {
 			classNames: {
 				selected: 'elgg-state-selected'
 			},
@@ -48,6 +48,8 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 				pageSelector: '.elgg-page'
 			}
 		});
+		
+		$menu_selector.mmenu(options, configuration);
 		
 		$(document).on('click', '.mm-menu__blocker', function() {
 			setTimeout(function() {
@@ -75,5 +77,5 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 		
 		// keeps default browser tab behaviour, otherwise tabbing only works when menu is collapsed
 		$(window).off($['mmenu'].keydown);
-	});
+	}, 1000);
 });
