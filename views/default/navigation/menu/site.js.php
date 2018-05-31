@@ -23,9 +23,6 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 					size: 25
 				}
 			},
-			keyboardNavigation: {
-				enabled: false,
-			},
 			navbars: [
 				{
 					"position": "top",
@@ -64,15 +61,19 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 				$menu_selector.trigger('mmenu.toggle');
 			}, 400);
 			
-			require(['elgg/Ajax'], function(Ajax) {
-				var ajax = new Ajax(false);
-				ajax.action('mmenu/save_menu_state', {
-					data: {
-						closed: $menu_selector.data('mmenu').getInstance().vars.opened ? 1 : 0
-					}
+			if (elgg.is_logged_in()) {
+				require(['elgg/Ajax'], function(Ajax) {
+					var ajax = new Ajax(false);
+					ajax.action('mmenu/save_menu_state', {
+						data: {
+							closed: $menu_selector.data('mmenu').getInstance().vars.opened ? 1 : 0
+						}
+					});
 				});
-			});
+			};
 		});
 		
+		// keeps default browser tab behaviour, otherwise tabbing only works when menu is collapsed
+		$(window).off($['mmenu'].keydown);
 	});
 });
