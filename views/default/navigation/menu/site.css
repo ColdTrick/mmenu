@@ -82,7 +82,7 @@ html[class*=mm-wrapper_sidebar-collapsed-] {
 			margin-right: 5px;
 		}
 		
-		.mm-listitem a {
+		.mm-listitem > * {
 			padding: 10px;
 		}
 	}

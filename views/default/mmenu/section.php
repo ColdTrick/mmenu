@@ -37,7 +37,7 @@ $lis = '';
 
 if (is_array($items)) {
 	foreach ($items as $menu_item) {
-		$lis .= elgg_view('navigation/menu/elements/item', [
+		$lis .= elgg_view('navigation/menu/elements/mmenu_item', [
 			'item' => $menu_item,
 			'item_class' => $item_class,
 		]);
