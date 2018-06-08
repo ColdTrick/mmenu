@@ -55,6 +55,10 @@ html[class*=mm-wrapper_sidebar-collapsed-] {
 		}
 	}
 	
+	.mm-navbar > a {
+		color: inherit;
+	}
+	
 	.mm-navbars_top {
 		border-bottom-color: $(topbar-background-color, $(background-color-highlight));
 		background: $(topbar-background-color, $(background-color-highlight));
