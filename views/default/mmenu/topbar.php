@@ -8,7 +8,7 @@ $link = elgg_view('output/url', [
 ]);
 
 $open = elgg_view_icon('chevron-right');
-$close = elgg_view_icon('times');
+$close = elgg_view_icon('chevron-left');
 $toggle = elgg_view('output/url', [
 	'class' => 'mmenu-toggle',
 	'href' => '#elgg-mmenu',

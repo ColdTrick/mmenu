@@ -34,7 +34,7 @@ html[class*=mm-wrapper_sidebar-collapsed-] {
 			display: none;
 		}
 		
-		.elgg-icon-times {
+		.elgg-icon-chevron-left {
 			display: inline;
 		}
 	}
@@ -103,7 +103,7 @@ html[class*=mm-wrapper_sidebar-collapsed-] {
 					display: inline;
 				}
 				
-				.elgg-icon-times {
+				.elgg-icon-chevron-left {
 					display: none;
 				}
 			}
