@@ -86,6 +86,8 @@ if ($child_menu_view && ($item->getHref() === false)) {
 	$item_content = elgg_view_menu_item($item);
 }
 
+$item_vars['title'] = elgg_extract('title', $item->getValues(), $item->getText());
+
 $item_view = $item_content . $child_menu_view;
 
 echo elgg_format_element('li', $item_vars, $item_view);
