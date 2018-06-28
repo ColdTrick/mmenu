@@ -6,6 +6,9 @@ if (is_dir(__DIR__ . '/vendor')) {
 }
 
 return [
+	'settings' => [
+		'topbar_to_site' => 0,
+	],
 	'views' => [
 		'default' => [
 			'jquery.mmenu/' => $composer_path . 'vendor/jQuery.mmenu/dist',

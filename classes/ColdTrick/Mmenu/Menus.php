@@ -12,6 +12,10 @@ class Menus {
 	 * @return array
 	 */
 	public static function topbarToSite(\Elgg\Hook $hook) {
+		if (!elgg_get_plugin_setting('topbar_to_site', 'mmenu')) {
+			return;
+		}
+		
 		$result = $hook->getValue();
 		
 		$menu = _elgg_services()->menus->getUnpreparedMenu('topbar');
