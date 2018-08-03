@@ -7,7 +7,6 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 			navbar: {
 				title: '&nbsp;'
 			},
-			backButton: true,
 			setSelected: {
 				hover: true,
 				parent: true
