@@ -53,6 +53,10 @@ html[class*=mm-wrapper_sidebar-collapsed-] {
 		.elgg-anchor > * {
 			vertical-align: middle;
 		}
+		
+		.mm-listitem_selected > span {
+			background: unset;
+		}
 	}
 	
 	.mm-navbar > a {
