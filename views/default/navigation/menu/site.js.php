@@ -37,7 +37,9 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 				{
 					"position": "bottom",
 					"content": [
-						$('.elgg-menu-footer').html()
+						'<?php
+							echo elgg_view('mmenu/bottombar');
+						?>'
 					]
 				}
 			]
