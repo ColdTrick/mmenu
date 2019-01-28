@@ -81,6 +81,6 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 		});
 		
 		// keeps default browser tab behaviour, otherwise tabbing only works when menu is collapsed
-		$(window).off($['mmenu'].keydown);
+		$(window).off('keydown.mm-offCanvas');
 	}, 1000);
 });
