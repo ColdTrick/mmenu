@@ -120,8 +120,6 @@ html[class*=mm-wrapper_sidebar-collapsed-] {
 	&:not(.mm-menu_multiline) {
 		.mm-listitem {
 			.elgg-anchor {
-				display: flex;
-				
 				.elgg-anchor-label {
 					white-space:nowrap;
 					overflow: hidden;
