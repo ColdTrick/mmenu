@@ -124,6 +124,8 @@ html[class*=mm-wrapper_sidebar-collapsed-] {
 					white-space:nowrap;
 					overflow: hidden;
 					text-overflow: ellipsis;
+					width: 100%;
+					justify-content: center;
 				}
 			}		
 		}
