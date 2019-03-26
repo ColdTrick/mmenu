@@ -39,6 +39,10 @@ html[class*=mm-wrapper_sidebar-collapsed-] {
 	}
 }
 
+.elgg-page-topbar .mmenu-toggle {
+	margin-right: auto;
+}
+
 .mm-listitem:after {
 	left: 0;
 }
@@ -137,5 +141,19 @@ html[class*=mm-wrapper_sidebar-collapsed-] {
 	
 	> .elgg-page-section {
 		box-shadow: inset 4px 0 4px -4px rgba(0,0,0,0.50);
+	}
+}
+
+@media screen and (max-width: 900px) {
+	html.mm-wrapper_sidebar-opened.mm-wrapper_sidebar-collapsed-40.mm-wrapper_sidebar-expanded-25 .mm-slideout {
+		transform: translate3d(40px,0,0) !important;
+		width: calc(100% - 40px) !important;
+	}
+}
+	
+@media screen and (max-width: 700px) {
+	html:not(.mm-wrapper_opened).mm-wrapper_sidebar-collapsed-40.mm-wrapper_sidebar-expanded-25 .mm-slideout {
+		transform: translate3d(0,0,0) !important;
+		width: 100% !important;
 	}
 }
