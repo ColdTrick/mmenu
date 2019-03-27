@@ -1,2 +1,16 @@
 Version history
 ===============
+
+1.0 (2019-03-27):
+
+- added: keeping first icon panel visible when subpanels open
+- added: mmenu config is now hookable
+- added: saving menu state as a plugin user setting
+- added: settings to control if topbar menu items are moved to site menu
+- added: show full width buttons for menu items without a clickable link
+- added: title is added to every menu item li
+- added: trigger jquery event for menu toggle
+- changed: fetch jQuery MMenu through bower
+- changed: moved account menu section into mmenu
+- fixed: keep icon alt visible in menu items
+- fixed: no backbutton menu behaviour as it creates unwanted sideeffects
