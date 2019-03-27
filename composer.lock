@@ -4,8 +4,47 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5885caa1feffc751033eab301b67e78b",
+    "content-hash": "d0d6051d92255dc597898806f11adda2",
     "packages": [
+        {
+            "name": "bower-asset/jquery",
+            "version": "3.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jquery/jquery-dist.git",
+                "reference": "9e8ec3d10fad04748176144f108d7355662ae75e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/9e8ec3d10fad04748176144f108d7355662ae75e",
+                "reference": "9e8ec3d10fad04748176144f108d7355662ae75e"
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "bower-asset/mmenu",
+            "version": "v7.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FrDH/jQuery.mmenu.git",
+                "reference": "8609c8ee6f7d460180f6c3854f4a3f013d9069e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FrDH/jQuery.mmenu/zipball/8609c8ee6f7d460180f6c3854f4a3f013d9069e7",
+                "reference": "8609c8ee6f7d460180f6c3854f4a3f013d9069e7"
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.7.0"
+            },
+            "type": "bower-asset",
+            "license": [
+                "CC-BY-NC-4.0"
+            ]
+        },
         {
             "name": "composer/installers",
             "version": "v1.6.0",
@@ -125,46 +164,6 @@
                 "zikula"
             ],
             "time": "2018-08-27T06:10:37+00:00"
-        },
-        {
-            "name": "jQuery.mmenu",
-            "version": "7.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FrDH/jQuery.mmenu.git",
-                "reference": "8609c8ee6f7d460180f6c3854f4a3f013d9069e7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FrDH/jQuery.mmenu/zipball/8609c8ee6f7d460180f6c3854f4a3f013d9069e7",
-                "reference": "8609c8ee6f7d460180f6c3854f4a3f013d9069e7",
-                "shasum": ""
-            },
-            "type": "library",
-            "license": [
-                "CC-BY-NC-4.0"
-            ],
-            "description": "The best jQuery plugin for app look-alike on- and off-canvas menus with sliding submenus for your website and webapp.",
-            "keywords": [
-                "app",
-                "curtain",
-                "list",
-                "listview",
-                "megamenu",
-                "menu",
-                "mmenu",
-                "mobile",
-                "navigation",
-                "off-canvas",
-                "on-canvas",
-                "panels",
-                "submenu"
-            ],
-            "support": {
-                "source": "https://github.com/FrDH/jQuery.mmenu/tree/v7.0.6",
-                "issues": "https://github.com/FrDH/jQuery.mmenu/issues"
-            },
-            "time": "2018-07-05T21:28:13+00:00"
         }
     ],
     "packages-dev": [
@@ -224,16 +223,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.4.0",
+            "version": "3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "379deb987e26c7cd103a7b387aea178baec96e48"
+                "reference": "5b4333b4010625d29580eb4a41f1e53251be6baa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/379deb987e26c7cd103a7b387aea178baec96e48",
-                "reference": "379deb987e26c7cd103a7b387aea178baec96e48",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/5b4333b4010625d29580eb4a41f1e53251be6baa",
+                "reference": "5b4333b4010625d29580eb4a41f1e53251be6baa",
                 "shasum": ""
             },
             "require": {
@@ -266,12 +265,12 @@
                 }
             ],
             "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
-            "homepage": "http://www.squizlabs.com/php-codesniffer",
+            "homepage": "https://github.com/squizlabs/PHP_CodeSniffer",
             "keywords": [
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-12-19T23:57:18+00:00"
+            "time": "2019-03-19T03:22:27+00:00"
         }
     ],
     "aliases": [],

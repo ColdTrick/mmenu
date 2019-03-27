@@ -10,7 +10,7 @@
 	},
 	"require": {
 		"composer/installers": "^1.0.8",
-		"jQuery.mmenu": "~7.0.0"
+		"bower-asset/mmenu": "~7.0.0"
 	},
 	"require-dev": {
 		"coldtrick/sniffs": "dev-master",
@@ -19,10 +19,10 @@
 	"conflict": {
 		"elgg/elgg": "<3.0"
 	},
-	 "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:frdh/jquery.mmenu.git"
-        }
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://asset-packagist.org"
+		}
 	]
 }
