@@ -62,6 +62,20 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 			}, 400);
 		});
 		
+		$(document).on('mouseenter', '.mm-menu__blocker', function() {
+			$('html').addClass('mmenu-slide-open');
+			$('.mm-slideout').on('mouseenter.mmenu', function() {
+				$(this).off('mouseenter.mmenu');
+				$('html').removeClass('mmenu-slide-open');
+				
+				var mmenu = $('.elgg-menu-site-container').data('mmenu');
+				mmenu.openPanel($('#mm-1'));
+				mmenu.close();
+			});
+			
+			$(this).click();
+		});
+		
 		$(document).on('click', '.mmenu-toggle', function() {
 			$menu_selector.data('mmenu').close();
 			setTimeout(function() {
