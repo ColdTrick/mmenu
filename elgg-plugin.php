@@ -11,7 +11,7 @@ return [
 	],
 	'views' => [
 		'default' => [
-			'jquery.mmenu/' => $composer_path . 'vendor/jQuery.mmenu/dist',
+			'jquery.mmenu/' => $composer_path . 'vendor/bower-asset/mmenu/dist',
 		],
 	],
 	'actions' => [
