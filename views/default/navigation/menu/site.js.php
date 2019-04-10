@@ -83,6 +83,11 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 			}, 400);
 			
 			if (elgg.is_logged_in()) {
+				if ($('.elgg-page-topbar .mmenu-toggle').is(':visible')) {
+					// do not save state on mobile
+					return;
+				}
+			
 				require(['elgg/Ajax'], function(Ajax) {
 					var ajax = new Ajax(false);
 					ajax.action('mmenu/save_menu_state', {
