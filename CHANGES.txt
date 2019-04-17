@@ -1,6 +1,11 @@
 Version history
 ===============
 
+1.1 (2019-04-17):
+
+- added: mouseover a closed menu will slide open the menu
+- fixed: do not save menu state on mobile
+
 1.0 (2019-03-27):
 
 - added: keeping first icon panel visible when subpanels open
