@@ -42,9 +42,34 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 						?>'
 					]
 				}
-			]
+			],
 		});
 		
+		// do not save state on mobile and for logged out users
+		if (elgg.is_logged_in() && (!$('.elgg-page-topbar .mmenu-toggle').is(':visible'))) {
+			options.hooks['open:after'] = function() {
+				require(['elgg/Ajax'], function(Ajax) {
+					var ajax = new Ajax(false);
+					ajax.action('mmenu/save_menu_state', {
+						data: {
+							closed: 0
+						}
+					});
+				});
+			};
+
+			options.hooks['close:after'] = function() {
+				require(['elgg/Ajax'], function(Ajax) {
+					var ajax = new Ajax(false);
+					ajax.action('mmenu/save_menu_state', {
+						data: {
+							closed: 1
+						}
+					});
+				});
+			};
+		}
+				
 		var configuration = elgg.trigger_hook('config:configuration', 'mmenu', {}, {
 			classNames: {
 				selected: 'elgg-state-selected'
@@ -81,22 +106,6 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 			setTimeout(function() {
 				$menu_selector.trigger('mmenu.toggle');
 			}, 400);
-			
-			if (elgg.is_logged_in()) {
-				if ($('.elgg-page-topbar .mmenu-toggle').is(':visible')) {
-					// do not save state on mobile
-					return;
-				}
-			
-				require(['elgg/Ajax'], function(Ajax) {
-					var ajax = new Ajax(false);
-					ajax.action('mmenu/save_menu_state', {
-						data: {
-							closed: $menu_selector.data('mmenu').getInstance().vars.opened ? 1 : 0
-						}
-					});
-				});
-			};
 		});
 		
 		// keeps default browser tab behaviour, otherwise tabbing only works when menu is collapsed
