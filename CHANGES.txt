@@ -1,6 +1,10 @@
 Version history
 ===============
 
+1.1.1 (2019-05-29):
+
+- fixed: moved open/close tracking to a more reliable event
+
 1.1 (2019-04-17):
 
 - added: mouseover a closed menu will slide open the menu
