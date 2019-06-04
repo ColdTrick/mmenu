@@ -48,6 +48,20 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 		// do not save state on mobile and for logged out users
 		if (elgg.is_logged_in() && (!$('.elgg-page-topbar .mmenu-toggle').is(':visible'))) {
 			options.hooks['open:after'] = function() {
+				if (!$('html').hasClass('mm-wrapper_sidebar-closed')) {
+					// do not save on initial open
+					return;
+				}
+
+				if (!$('html').hasClass('mm-wrapper_blocking')) {
+					// do not save on initial open
+					return;
+				}
+				
+				if ($('html').hasClass('mmenu-do-not-save-state')) {
+					return;
+				}
+				
 				require(['elgg/Ajax'], function(Ajax) {
 					var ajax = new Ajax(false);
 					ajax.action('mmenu/save_menu_state', {
@@ -59,6 +73,10 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 			};
 
 			options.hooks['close:after'] = function() {
+				if ($('html').hasClass('mmenu-do-not-save-state')) {
+					return;
+				}
+				
 				require(['elgg/Ajax'], function(Ajax) {
 					var ajax = new Ajax(false);
 					ajax.action('mmenu/save_menu_state', {
@@ -89,6 +107,7 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 		
 		$(document).on('mouseenter', '.mm-menu__blocker', function() {
 			$('html').addClass('mmenu-slide-open');
+			$('html').addClass('mmenu-do-not-save-state');
 			$('.mm-slideout').on('mouseenter.mmenu', function() {
 				$(this).off('mouseenter.mmenu');
 				$('html').removeClass('mmenu-slide-open');
@@ -96,6 +115,8 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 				var mmenu = $('.elgg-menu-site-container').data('mmenu');
 				mmenu.openPanel($('#mm-1'));
 				mmenu.close();
+				
+				$('html').removeClass('mmenu-do-not-save-state');
 			});
 			
 			$(this).click();
