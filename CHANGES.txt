@@ -1,6 +1,10 @@
 Version history
 ===============
 
+1.1.2 (2019-06-12):
+
+- fixed: only save state of mmenu if really needed
+
 1.1.1 (2019-05-29):
 
 - fixed: moved open/close tracking to a more reliable event
