@@ -17,7 +17,8 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/9e8ec3d10fad04748176144f108d7355662ae75e",
-                "reference": "9e8ec3d10fad04748176144f108d7355662ae75e"
+                "reference": "9e8ec3d10fad04748176144f108d7355662ae75e",
+                "shasum": null
             },
             "type": "bower-asset",
             "license": [
@@ -29,13 +30,14 @@
             "version": "v7.0.6",
             "source": {
                 "type": "git",
-                "url": "https://github.com/FrDH/jQuery.mmenu.git",
+                "url": "https://github.com/FrDH/mmenu-js.git",
                 "reference": "8609c8ee6f7d460180f6c3854f4a3f013d9069e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FrDH/jQuery.mmenu/zipball/8609c8ee6f7d460180f6c3854f4a3f013d9069e7",
-                "reference": "8609c8ee6f7d460180f6c3854f4a3f013d9069e7"
+                "url": "https://api.github.com/repos/FrDH/mmenu-js/zipball/8609c8ee6f7d460180f6c3854f4a3f013d9069e7",
+                "reference": "8609c8ee6f7d460180f6c3854f4a3f013d9069e7",
+                "shasum": null
             },
             "require": {
                 "bower-asset/jquery": ">=1.7.0"
