@@ -1,4 +1,4 @@
-define(['elgg', 'jquery', 'jquery.mmenu/mmenu'], function (elgg, $) {
+define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 	elgg.register_hook_handler('init', 'system', function() {
 		var $menu_selector = $('.elgg-menu-site-container');
 		
@@ -34,22 +34,15 @@ define(['elgg', 'jquery', 'jquery.mmenu/mmenu'], function (elgg, $) {
 						?>'
 					]
 				},
-				<?php
-				
-					$bottombar = elgg_view('mmenu/bottombar');
-					if (!empty($bottombar)) {
-						?>
 				{
 					"position": "bottom",
 					"content": [
-						'<?php echo $bottombar;	?>'
+						'<?php
+							echo elgg_view('mmenu/bottombar');
+						?>'
 					]
 				}
-				<?php
-					}
-				?>
 			],
-			hooks: [],
 		});
 		
 		// do not save state on mobile and for logged out users
@@ -100,9 +93,7 @@ define(['elgg', 'jquery', 'jquery.mmenu/mmenu'], function (elgg, $) {
 				selected: 'elgg-state-selected'
 			},
 			offCanvas: {
-				page: {
-					selector: '.elgg-page'
-				}
+				pageSelector: '.elgg-page'
 			}
 		});
 		
@@ -117,19 +108,18 @@ define(['elgg', 'jquery', 'jquery.mmenu/mmenu'], function (elgg, $) {
 		$(document).on('mouseenter', '.mm-menu__blocker', function() {
 			$('html').addClass('mmenu-slide-open');
 			$('html').addClass('mmenu-do-not-save-state');
-	
 			$('.mm-slideout').on('mouseenter.mmenu', function() {
 				$(this).off('mouseenter.mmenu');
 				$('html').removeClass('mmenu-slide-open');
 				
 				var mmenu = $('.elgg-menu-site-container').data('mmenu');
-				mmenu.closeAllPanels();
+				mmenu.openPanel($('#mm-1'));
 				mmenu.close();
 				
 				$('html').removeClass('mmenu-do-not-save-state');
 			});
 			
-			$('.elgg-menu-site-container').data('mmenu').open();
+			$(this).click();
 		});
 		
 		$(document).on('click', '.mmenu-toggle', function() {

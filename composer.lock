@@ -4,23 +4,46 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c41e8f8b431d66f6be92debdc9a8586b",
+    "content-hash": "d0d6051d92255dc597898806f11adda2",
     "packages": [
         {
-            "name": "bower-asset/mmenu",
-            "version": "v8.1.1",
+            "name": "bower-asset/jquery",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/FrDH/mmenu-js.git",
-                "reference": "2db4ae6df26a4c696d57d236a9073a9b4727b61b"
+                "url": "https://github.com/jquery/jquery-dist.git",
+                "reference": "9e8ec3d10fad04748176144f108d7355662ae75e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FrDH/mmenu-js/zipball/2db4ae6df26a4c696d57d236a9073a9b4727b61b",
-                "reference": "2db4ae6df26a4c696d57d236a9073a9b4727b61b",
-                "shasum": null
+                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/9e8ec3d10fad04748176144f108d7355662ae75e",
+                "reference": "9e8ec3d10fad04748176144f108d7355662ae75e"
             },
-            "type": "bower-asset"
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "bower-asset/mmenu",
+            "version": "v7.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FrDH/jQuery.mmenu.git",
+                "reference": "8609c8ee6f7d460180f6c3854f4a3f013d9069e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FrDH/jQuery.mmenu/zipball/8609c8ee6f7d460180f6c3854f4a3f013d9069e7",
+                "reference": "8609c8ee6f7d460180f6c3854f4a3f013d9069e7"
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.7.0"
+            },
+            "type": "bower-asset",
+            "license": [
+                "CC-BY-NC-4.0"
+            ]
         },
         {
             "name": "composer/installers",
@@ -144,25 +167,6 @@
         }
     ],
     "packages-dev": [
-        {
-            "name": "bower-asset/jquery",
-            "version": "3.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jquery/jquery-dist.git",
-                "reference": "9e8ec3d10fad04748176144f108d7355662ae75e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/9e8ec3d10fad04748176144f108d7355662ae75e",
-                "reference": "9e8ec3d10fad04748176144f108d7355662ae75e",
-                "shasum": null
-            },
-            "type": "bower-asset",
-            "license": [
-                "MIT"
-            ]
-        },
         {
             "name": "coldtrick/releases",
             "version": "dev-master",

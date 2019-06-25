@@ -14,7 +14,7 @@ class Views {
 	public static function addHtmlClasses(\Elgg\Hook $hook) {
 		$result = $hook->getValue();
 		
-		$menu_classes = ['mm-wrapper_sidebar-collapsed-40', 'mm-wrapper_sidebar-expanded-25', 'mm-wrapper_sidebar-collapsed'];
+		$menu_classes = ['mm-wrapper_sidebar-collapsed-40', 'mm-wrapper_sidebar-expanded-25'];
 		
 		$closed = false;
 		if (elgg_is_logged_in()) {
@@ -25,7 +25,6 @@ class Views {
 			$menu_classes[] = 'mm-wrapper_sidebar-closed';
 		} else {
 			$menu_classes[] = 'mm-wrapper_sidebar-opened';
-			$menu_classes[] = 'mm-wrapper_sidebar-expanded';
 		}
 		
 		$html_attrs = elgg_extract('html_attrs', $result, []);
@@ -33,11 +32,9 @@ class Views {
 		
 		$result['html_attrs'] = $html_attrs;
 		
-		$result['body'] = '<div class="mm-menu_sidebar-expanded mm-menu_opened"></div>' . $result['body'];
-				
 		return $result;
 	}
-
+	
 	/**
 	 * Adds classes to html
 	 *
