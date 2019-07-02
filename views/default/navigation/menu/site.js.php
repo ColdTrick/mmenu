@@ -34,14 +34,20 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 						?>'
 					]
 				},
+				<?php
+				
+					$bottombar = elgg_view('mmenu/bottombar');
+					if (!empty($bottombar)) {
+						?>
 				{
 					"position": "bottom",
 					"content": [
-						'<?php
-							echo elgg_view('mmenu/bottombar');
-						?>'
+						'<?php echo $bottombar;	?>'
 					]
 				}
+				<?php
+					}
+				?>
 			],
 			hooks: [],
 		});
