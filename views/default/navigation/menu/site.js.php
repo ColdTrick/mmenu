@@ -43,6 +43,7 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 					]
 				}
 			],
+			hooks: [],
 		});
 		
 		// do not save state on mobile and for logged out users
