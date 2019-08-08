@@ -8,7 +8,7 @@ elgg_register_event_handler('init', 'system', 'mmenu_init');
  * @return void
  */
 function mmenu_init() {
-	elgg_extend_view('elgg.css', 'navigation/menu/site.css');
+	elgg_extend_view('jquery.mmenu/jquery.mmenu.all.css', 'navigation/menu/site.css');
 	elgg_extend_view('elements/z-index.css', 'mmenu/z-index.css');
 	
 	elgg_register_plugin_hook_handler('register', 'menu:site', '\ColdTrick\Mmenu\Menus::topbarToSite');
