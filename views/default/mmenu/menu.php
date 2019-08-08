@@ -2,7 +2,7 @@
 
 use Elgg\Menu\MenuSection;
 
-elgg_require_css('jquery.mmenu/jquery.mmenu.all.css');
+elgg_load_external_file('css', 'jquery.mmenu/jquery.mmenu.all.css');
 elgg_require_js('navigation/menu/site');
 
 // we want css classes to use dashes
