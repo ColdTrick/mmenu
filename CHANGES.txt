@@ -1,6 +1,13 @@
 Version history
 ===============
 
+2.0 (2019-08-22):
+
+- changed: increased Elgg requirement to 3.1
+- changed: replaced deprecate elgg_load_css with elgg_require_css
+- fixed: only output bottombar if there is data
+- fixed: prevent js issue about unavailable hooks option
+
 1.1.2 (2019-06-12):
 
 - fixed: only save state of mmenu if really needed
