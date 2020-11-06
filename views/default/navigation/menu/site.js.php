@@ -1,4 +1,4 @@
-define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
+define(['elgg', 'jquery', 'jquery.mmenu/mmenu'], function (elgg, $) {
 	elgg.register_hook_handler('init', 'system', function() {
 		var $menu_selector = $('.elgg-menu-site-container');
 		
@@ -55,17 +55,17 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 		// do not save state on mobile and for logged out users
 		if (elgg.is_logged_in() && (!$('.elgg-page-topbar .mmenu-toggle').is(':visible'))) {
 			options.hooks['open:after'] = function() {
-				if (!$('html').hasClass('mm-wrapper_sidebar-closed')) {
+				if (!$('body').hasClass('mm-wrapper_sidebar-closed')) {
 					// do not save on initial open
 					return;
 				}
 
-				if (!$('html').hasClass('mm-wrapper_blocking')) {
+				if (!$('body').hasClass('mm-wrapper_blocking')) {
 					// do not save on initial open
 					return;
 				}
 				
-				if ($('html').hasClass('mmenu-do-not-save-state')) {
+				if ($('body').hasClass('mmenu-do-not-save-state')) {
 					return;
 				}
 				
@@ -80,7 +80,7 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 			};
 
 			options.hooks['close:after'] = function() {
-				if ($('html').hasClass('mmenu-do-not-save-state')) {
+				if ($('body').hasClass('mmenu-do-not-save-state')) {
 					return;
 				}
 				
@@ -113,20 +113,20 @@ define(['elgg', 'jquery', 'jquery.mmenu/jquery.mmenu.all'], function (elgg, $) {
 		});
 		
 		$(document).on('mouseenter', '.mm-menu__blocker', function() {
-			$('html').addClass('mmenu-slide-open');
-			$('html').addClass('mmenu-do-not-save-state');
+			$('body').addClass('mmenu-slide-open');
+			$('body').addClass('mmenu-do-not-save-state');
 			$('.mm-slideout').on('mouseenter.mmenu', function() {
 				$(this).off('mouseenter.mmenu');
-				$('html').removeClass('mmenu-slide-open');
+				$('body').removeClass('mmenu-slide-open');
 				
 				var mmenu = $('.elgg-menu-site-container').data('mmenu');
-				mmenu.openPanel($('#mm-1'));
+				mmenu.closeAllPanels();;
 				mmenu.close();
 				
-				$('html').removeClass('mmenu-do-not-save-state');
+				$('body').removeClass('mmenu-do-not-save-state');
 			});
 			
-			$(this).click();
+			$('.elgg-menu-site-container').data('mmenu').open();
 		});
 		
 		$(document).on('click', '.mmenu-toggle', function() {

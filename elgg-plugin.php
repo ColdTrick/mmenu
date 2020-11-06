@@ -46,7 +46,7 @@ return [
 		'elements/z-index.css' => [
 			'mmenu/z-index.css' => [],
 		],
-		'jquery.mmenu/jquery.mmenu.all.css' => [
+		'jquery.mmenu/mmenu.css' => [
 			'navigation/menu/site.css' => [],
 		],
 	],
