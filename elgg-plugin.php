@@ -1,14 +1,14 @@
 <?php
 
-use ColdTrick\Mmenu\Bootstrap;
-
 $composer_path = '';
 if (is_dir(__DIR__ . '/vendor')) {
 	$composer_path = __DIR__ . '/';
 }
 
 return [
-	'bootstrap' => Bootstrap::class,
+	'plugin' => [
+		'version' => '3.0',
+	],
 	'settings' => [
 		'topbar_to_site' => 0,
 	],
@@ -49,5 +49,8 @@ return [
 		'jquery.mmenu/mmenu.css' => [
 			'navigation/menu/site.css' => [],
 		],
+	],
+	'view_options' => [
+		'navigation/menu/site.js' => ['simplecache' => true],
 	],
 ];

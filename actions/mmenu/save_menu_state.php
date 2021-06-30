@@ -2,7 +2,12 @@
 
 $closed = (bool) get_input('closed', false);
 
-if (!elgg_set_plugin_user_setting('mmenu-closed', $closed, elgg_get_logged_in_user_guid(), 'mmenu')) {
+$user = elgg_get_logged_in_user_entity();
+if (!$user instanceof \ElggUser) {
+	return elgg_error_response();
+}
+
+if (!$user->setPluginSetting('mmenu', 'mmenu-closed', $closed)) {
 	return elgg_error_response();
 }
 
