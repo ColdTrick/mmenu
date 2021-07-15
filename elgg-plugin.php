@@ -18,7 +18,7 @@ return [
 	'hooks' => [
 		'prepare' => [
 			'menu:site' => [
-				'_elgg_site_menu_setup' => [
+				'Elgg\Menus\Site::reorderItems()' => [
 					'unregister' => true,
 				],
 			],

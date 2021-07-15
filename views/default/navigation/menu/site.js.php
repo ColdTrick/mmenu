@@ -18,11 +18,9 @@ define(['elgg', 'jquery', 'jquery.mmenu/mmenu'], function (elgg, $) {
 			sidebar: {
 				collapsed: {
 					use: "(min-width: 700px)",
-					size: 40
 				},
 				expanded: {
 					use: "(min-width: 900px)",
-					size: 25
 				}
 			},
 			navbars: [
@@ -99,9 +97,6 @@ define(['elgg', 'jquery', 'jquery.mmenu/mmenu'], function (elgg, $) {
 			classNames: {
 				selected: 'elgg-state-selected'
 			},
-			offCanvas: {
-				pageSelector: '.elgg-page'
-			}
 		});
 		
 		$menu_selector.mmenu(options, configuration);
