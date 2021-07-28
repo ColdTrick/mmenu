@@ -132,6 +132,7 @@ define(['elgg', 'jquery', 'jquery.mmenu/mmenu'], function (elgg, $) {
 		});
 		
 		// keeps default browser tab behaviour, otherwise tabbing only works when menu is collapsed
-		$(window).off('keydown.mm-offCanvas');
+		// see: https://github.com/FrDH/mmenu-js/issues/86
+		document.body.removeEventListener('keydown', document.body.mmEventKeydownTabguard[0]);
 	}, 1000);
 });
