@@ -5,13 +5,6 @@
 	}
 }
 
-.elgg-page:not(.mm-page),
-html[class*=mm-wrapper_sidebar-collapsed-] {
-	.elgg-page-topbar .mmenu-toggle {
-		display: none;
-	}
-}
-
 .mmenu-topbar {
 	display: flex;
 	padding: 0;
@@ -41,6 +34,7 @@ html[class*=mm-wrapper_sidebar-collapsed-] {
 
 .elgg-page-topbar .mmenu-toggle {
 	margin-right: auto;
+	display: none;
 }
 
 .mm-listitem:after {
