@@ -32,9 +32,6 @@ return [
 			'page/elements/html' => [
 				'\ColdTrick\Mmenu\Views::addHtmlClasses' => [],
 			],
-			'page/default' => [
-				'\ColdTrick\Mmenu\Views::addPageClasses' => [],
-			],
 		],
 	],
 	'views' => [

@@ -97,6 +97,11 @@ define(['elgg', 'jquery', 'jquery.mmenu/mmenu'], function (elgg, $) {
 			classNames: {
 				selected: 'elgg-state-selected'
 			},
+			offCanvas: {
+				page: {
+					selector: 'body > .elgg-page'
+				}
+			}
 		});
 		
 		$menu_selector.mmenu(options, configuration);
