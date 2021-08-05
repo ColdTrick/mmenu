@@ -155,11 +155,13 @@
 body {
 	&.mm-wrapper_sidebar-closed > .elgg-page {
 		width: calc(100% - var(--mm-sidebar-collapsed-size));
-		transform: translate3d(var(--mm-sidebar-collapsed-size), 0, 0);
+		transform: unset !important;
+		float: right;
 	}
 	&.mm-wrapper_sidebar-opened > .elgg-page {
 		width: calc(100% - var(--mm-sidebar-expanded-size));
-		transform: translate3d(var(--mm-sidebar-expanded-size), 0, 0);
+		transform: unset !important;
+		float: right;
 	}
 }
 	
