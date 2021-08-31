@@ -40,6 +40,9 @@ return [
 		],
 	],
 	'view_extensions' => [
+		'elgg.css' => [
+			'jquery.mmenu/mmenu.css' => [],
+		],
 		'elements/z-index.css' => [
 			'mmenu/z-index.css' => [],
 		],

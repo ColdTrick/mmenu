@@ -3,7 +3,6 @@ define(['elgg', 'jquery', 'jquery.mmenu/mmenu'], function (elgg, $) {
 		var $menu_selector = $('.elgg-menu-site-container');
 		
 		var options = elgg.trigger_hook('config:options', 'mmenu', {}, {
-			drag: true,
 			navbar: {
 				title: '&nbsp;'
 			},
@@ -113,20 +112,18 @@ define(['elgg', 'jquery', 'jquery.mmenu/mmenu'], function (elgg, $) {
 		});
 		
 		$(document).on('mouseenter', '.mm-menu__blocker', function() {
-			$('body').addClass('mmenu-slide-open');
 			$('body').addClass('mmenu-do-not-save-state');
-			$('.mm-slideout').on('mouseenter.mmenu', function() {
-				$(this).off('mouseenter.mmenu');
-				$('body').removeClass('mmenu-slide-open');
-				
-				var mmenu = $('.elgg-menu-site-container').data('mmenu');
-				mmenu.closeAllPanels();;
-				mmenu.close();
-				
-				$('body').removeClass('mmenu-do-not-save-state');
-			});
-			
 			$('.elgg-menu-site-container').data('mmenu').open();
+			
+			setTimeout(function() {
+				$('.mm-slideout').on('mouseenter.mmenu', function() {
+					$(this).off('mouseenter.mmenu');
+					$('body').removeClass('mmenu-do-not-save-state');
+					
+					$('.elgg-menu-site-container').data('mmenu').close();
+					$('.elgg-menu-site-container').data('mmenu').closeAllPanels();
+				});
+			}, 100);
 		});
 		
 		$(document).on('click', '.mmenu-toggle', function() {
