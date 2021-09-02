@@ -1,4 +1,4 @@
-define(['elgg', 'jquery', 'jquery.mmenu/mmenu'], function (elgg, $) {
+	define(['elgg', 'jquery', 'jquery.mmenu/mmenu'], function (elgg, $) {
 	elgg.register_hook_handler('init', 'system', function() {
 		var $menu_selector = $('.elgg-menu-site-container');
 		
@@ -53,11 +53,6 @@ define(['elgg', 'jquery', 'jquery.mmenu/mmenu'], function (elgg, $) {
 		if (elgg.is_logged_in() && (!$('.elgg-page-topbar .mmenu-toggle').is(':visible'))) {
 			options.hooks['open:after'] = function() {
 				if (!$('body').hasClass('mm-wrapper_sidebar-closed')) {
-					// do not save on initial open
-					return;
-				}
-
-				if (!$('body').hasClass('mm-wrapper_blocking')) {
 					// do not save on initial open
 					return;
 				}
@@ -118,10 +113,11 @@ define(['elgg', 'jquery', 'jquery.mmenu/mmenu'], function (elgg, $) {
 			setTimeout(function() {
 				$('.mm-slideout').on('mouseenter.mmenu', function() {
 					$(this).off('mouseenter.mmenu');
-					$('body').removeClass('mmenu-do-not-save-state');
 					
 					$('.elgg-menu-site-container').data('mmenu').close();
 					$('.elgg-menu-site-container').data('mmenu').closeAllPanels();
+					
+					$('body').removeClass('mmenu-do-not-save-state');
 				});
 			}, 100);
 		});
