@@ -142,6 +142,10 @@ html {
 	}
 }
 
+.mm-wrapper {
+	position: initial;	
+}
+
 .mm-wrapper_sidebar-collapsed,
 .mm-wrapper_opened {
 	.mm-slideout:before {
