@@ -7,7 +7,7 @@ if (is_dir(__DIR__ . '/vendor')) {
 
 return [
 	'plugin' => [
-		'version' => '3.0',
+		'version' => '4.0',
 	],
 	'settings' => [
 		'topbar_to_site' => 0,
