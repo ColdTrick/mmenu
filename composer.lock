@@ -4,19 +4,19 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b3efc87bd4a614cad5e00559e5571859",
+    "content-hash": "cd8f46ffc9e006644a1b218334683c14",
     "packages": [
         {
             "name": "bower-asset/mmenu",
             "version": "v8.5.23",
             "source": {
                 "type": "git",
-                "url": "https://github.com/FrDH/mmenu-js.git",
+                "url": "git@github.com:BeSite/jQuery.mmenu.git",
                 "reference": "fc73fd03ee015a13dab0e8a57a0f2ad56e7e548a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FrDH/mmenu-js/zipball/fc73fd03ee015a13dab0e8a57a0f2ad56e7e548a",
+                "url": "https://api.github.com/repos/BeSite/jQuery.mmenu/zipball/fc73fd03ee015a13dab0e8a57a0f2ad56e7e548a",
                 "reference": "fc73fd03ee015a13dab0e8a57a0f2ad56e7e548a"
             },
             "type": "bower-asset"
@@ -174,48 +174,6 @@
     ],
     "packages-dev": [
         {
-            "name": "coldtrick/releases",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ColdTrick/releases.git",
-                "reference": "c135064f9fc269e4f4d3ea9f0ef40989165c7b7c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ColdTrick/releases/zipball/c135064f9fc269e4f4d3ea9f0ef40989165c7b7c",
-                "reference": "c135064f9fc269e4f4d3ea9f0ef40989165c7b7c",
-                "shasum": ""
-            },
-            "default-branch": true,
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0"
-            ],
-            "description": "A set of scripts needed for building releases",
-            "keywords": [
-                "ci",
-                "release",
-                "travis"
-            ],
-            "support": {
-                "issues": "https://github.com/ColdTrick/releases/issues",
-                "source": "https://github.com/ColdTrick/releases"
-            },
-            "funding": [
-                {
-                    "url": "https://www.paypal.me/ColdTrick",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/ColdTrick",
-                    "type": "github"
-                }
-            ],
-            "time": "2020-07-08T11:28:12+00:00"
-        },
-        {
             "name": "coldtrick/sniffs",
             "version": "dev-master",
             "source": {
@@ -232,7 +190,6 @@
             "require": {
                 "squizlabs/php_codesniffer": ">=1.3.4"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -241,9 +198,6 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Elgg coding standards",
-            "support": {
-                "source": "https://github.com/ColdTrick/elgg-coding-standards/tree/master"
-            },
             "funding": [
                 {
                     "url": "https://www.paypal.me/ColdTrick",
@@ -305,23 +259,17 @@
                 "phpcs",
                 "standards"
             ],
-            "support": {
-                "issues": "https://github.com/squizlabs/PHP_CodeSniffer/issues",
-                "source": "https://github.com/squizlabs/PHP_CodeSniffer",
-                "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
-            },
             "time": "2021-04-09T00:54:41+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "coldtrick/sniffs": 20,
-        "coldtrick/releases": 20
+        "coldtrick/sniffs": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "1.1.0"
 }
