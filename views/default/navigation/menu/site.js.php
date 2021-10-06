@@ -46,6 +46,7 @@
 					}
 				?>
 			],
+			extensions: ["pagedim-black"],
 			hooks: [],
 		});
 		
