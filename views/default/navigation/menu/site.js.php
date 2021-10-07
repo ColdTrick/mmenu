@@ -110,10 +110,17 @@
 		$(document).on('mouseenter', '.mm-menu__blocker', function() {
 			$('body').addClass('mmenu-do-not-save-state');
 			$('.elgg-menu-site-container').data('mmenu').open();
+			setTimeout(function() {
+				$menu_selector.trigger('mmenu.toggle');
+			}, 400);
 			
 			setTimeout(function() {
 				$('.mm-slideout').on('mouseenter.mmenu', function() {
 					$(this).off('mouseenter.mmenu');
+					
+					setTimeout(function() {
+						$menu_selector.trigger('mmenu.toggle');
+					}, 400);
 					
 					$('.elgg-menu-site-container').data('mmenu').close();
 					$('.elgg-menu-site-container').data('mmenu').closeAllPanels();
