@@ -1,6 +1,10 @@
 Version history
 ===============
 
+4.1 (2021-10-12):
+
+- changed: added pagedim to black extension
+
 4.0 (2021-09-27):
 
 - added: French translation
