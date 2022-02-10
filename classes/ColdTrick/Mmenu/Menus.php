@@ -25,7 +25,7 @@ class Menus {
 			if ($item->getName() === 'account') {
 				$viewer = elgg_get_logged_in_user_entity();
 				unset($item->icon_alt);
-				$item->link_class = 'elgg-avatar-tiny';
+				$item->setLinkClass('elgg-avatar-tiny');
 				$item->icon = elgg_view('output/img', [
 					'src' => $viewer->getIconURL('tiny'),
 					'alt' => $viewer->getDisplayName(),

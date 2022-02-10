@@ -27,21 +27,14 @@ unset($vars['section']);
 $vars['data-menu-section'] = $section;
 
 if ($headers) {
-	echo elgg_format_element('h2', [
-		'class' => 'elgg-menu-section-header',
-			], elgg_echo("menu:$name:header:$section"));
+	echo elgg_format_element('h2', ['class' => 'elgg-menu-section-header'], elgg_echo("menu:{$name}:header:{$section}"));
 }
-
-$lis = '';
-
 
 if (is_array($items)) {
 	foreach ($items as $menu_item) {
-		$lis .= elgg_view('navigation/menu/elements/mmenu_item', [
+		echo elgg_view('navigation/menu/elements/mmenu_item', [
 			'item' => $menu_item,
 			'item_class' => $item_class,
 		]);
 	}
 }
-
-echo $lis;
