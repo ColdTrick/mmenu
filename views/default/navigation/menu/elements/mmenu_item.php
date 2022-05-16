@@ -83,7 +83,7 @@ if ($child_menu_view && ($item->getHref() === false)) {
 
 	$item_content = elgg_format_element('span', $span_vars, $icon . elgg_format_element('span', ['class' => 'elgg-anchor-label'], $item->getText()));
 } else {
-	$item_content = elgg_view_menu_item($item);
+	$item_content = elgg_view('navigation/menu/elements/item/url', ['item' => $item]);
 }
 
 $item_vars['title'] = elgg_extract('title', $item->getValues(), $item->getText());
