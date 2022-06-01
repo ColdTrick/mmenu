@@ -1,6 +1,10 @@
 Version history
 ===============
 
+5.0 (2022-06-01):
+
+- changed: updated for Elgg 4.2
+
 4.1.1 (2022-02-16):
 
 - fixed: set correct link class on account menu item
