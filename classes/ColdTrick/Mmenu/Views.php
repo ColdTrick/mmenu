@@ -2,17 +2,20 @@
 
 namespace ColdTrick\Mmenu;
 
+/**
+ * View related callbacks
+ */
 class Views {
 	
 	/**
 	 * Adds classes to html
 	 *
-	 * @param \Elgg\Hook $hook the hook
+	 * @param \Elgg\Event $event 'view_vars', 'page/elements/html'
 	 *
 	 * @return array
 	 */
-	public static function addHtmlClasses(\Elgg\Hook $hook) {
-		$result = $hook->getValue();
+	public static function addHtmlClasses(\Elgg\Event $event) {
+		$result = $event->getValue();
 				
 		$menu_classes = ['mm-wrapper_sidebar-expanded'];
 		

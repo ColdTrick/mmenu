@@ -11,7 +11,7 @@ echo elgg_view('output/url', [
 	'icon' => 'bars',
 ]);
 
-echo elgg_view_menu('site', ['menu_view' => 'mmenu/menu', 'sort_by' => 'text']);
+echo elgg_view_menu('site', ['menu_view' => 'mmenu/menu']);
 
 echo elgg_format_element('div', [
 	'class' => 'elgg-nav-search',

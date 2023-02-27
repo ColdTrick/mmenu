@@ -10,7 +10,7 @@
  */
 
 $item = elgg_extract('item', $vars);
-if (!$item instanceof ElggMenuItem) {
+if (!$item instanceof \ElggMenuItem) {
 	return;
 }
 
@@ -23,12 +23,13 @@ if (!empty($children)) {
 	if ($item->getSelected()) {
 		$link_class = 'elgg-menu-opened';
 	}
+	
 	$item->addLinkClass($link_class);
 
 	$item->addLinkClass('elgg-menu-parent');
 
 	$child_menu_vars = $item->getChildMenuOptions();
-	$child_menu_vars['id'] =  $item->getId();
+	$child_menu_vars['id'] = $item->getId();
 	$child_menu_vars['items'] = $children;
 	$child_menu_vars['class'] = elgg_extract_class($child_menu_vars, ['elgg-menu', 'elgg-child-menu']);
 
@@ -36,12 +37,12 @@ if (!empty($children)) {
 	unset($child_menu_vars['display']);
 
 	switch ($display) {
-		case 'dropdown' :
+		case 'dropdown':
 			$item->addDeps(['elgg/menus/dropdown']);
 			$item->addItemClass('elgg-menu-item-has-dropdown');
 			break;
 
-		case 'toggle' :
+		case 'toggle':
 			$item->addDeps(['elgg/menus/toggle']);
 			$item->addItemClass('elgg-menu-item-has-toggle');
 			break;
@@ -54,7 +55,7 @@ $item_vars['data-menu-item'] = $item->getName();
 
 $item_vars['class'] = elgg_extract_class($vars, $item->getItemClass(), 'item_class');
 if ($item->getSelected()) {
-	$item_vars['class'][] = "elgg-state-selected";
+	$item_vars['class'][] = 'elgg-state-selected';
 }
 
 

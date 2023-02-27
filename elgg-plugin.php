@@ -15,10 +15,10 @@ return [
 	'actions' => [
 		'mmenu/save_menu_state' => [],
 	],
-	'hooks' => [
+	'events' => [
 		'prepare' => [
 			'menu:site' => [
-				'Elgg\Menus\Site::reorderItems()' => [
+				'Elgg\Menus\Site::reorderItems' => [
 					'unregister' => true,
 				],
 			],

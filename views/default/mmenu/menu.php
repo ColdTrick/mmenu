@@ -12,7 +12,7 @@ $name_class_selector = preg_replace('/[^a-z0-9\-]/i', '-', strtolower($name));
 $show_section_headers = elgg_extract('show_section_headers', $vars, false);
 $item_class = elgg_extract('item_class', $vars, '');
 
-$class = elgg_extract_class($vars, ["elgg-menu", "elgg-menu-{$name_class_selector}"]);
+$class = elgg_extract_class($vars, ['elgg-menu', "elgg-menu-{$name_class_selector}"]);
 
 $menu_view = '';
 
@@ -48,4 +48,3 @@ echo elgg_format_element('nav', [
 	'data-menu-name' => $name,
 	'id' => 'elgg-mmenu',
 ], elgg_format_element('ul', [], $menu_view));
-

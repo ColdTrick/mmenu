@@ -2,21 +2,24 @@
 
 namespace ColdTrick\Mmenu;
 
+/**
+ * Menu callbacks
+ */
 class Menus {
 	
 	/**
 	 * Registers topbar menu items to the site menu
 	 *
-	 * @param \Elgg\Hook $hook the hook
+	 * @param \Elgg\Event $event 'register', 'menu:site'
 	 *
 	 * @return array
 	 */
-	public static function topbarToSite(\Elgg\Hook $hook) {
+	public static function topbarToSite(\Elgg\Event $event) {
 		if (!elgg_get_plugin_setting('topbar_to_site', 'mmenu')) {
 			return;
 		}
 		
-		$result = $hook->getValue();
+		$result = $event->getValue();
 		
 		$menu = _elgg_services()->menus->getUnpreparedMenu('topbar');
 		foreach ($menu->getItems() as $item) {

@@ -1,7 +1,13 @@
-define(['jquery', 'elgg', 'jquery.mmenu/mmenu'], function ($, elgg) {
+<?php
+
+$topbar = elgg_view('mmenu/topbar');
+$bottombar = elgg_view('mmenu/bottombar');
+
+?>
+define(['jquery', 'elgg', 'elgg/hooks', 'jquery.mmenu/mmenu'], function ($, elgg, hooks) {
 	var $menu_selector = $('.elgg-menu-site-container');
 	
-	var options = elgg.trigger_hook('config:options', 'mmenu', {}, {
+	var options = hooks.trigger('config:options', 'mmenu', {}, {
 		navbar: {
 			title: '&nbsp;'
 		},
@@ -25,25 +31,17 @@ define(['jquery', 'elgg', 'jquery.mmenu/mmenu'], function ($, elgg) {
 			{
 				"position": "top",
 				"content": [
-					'<?php
-						echo elgg_view('mmenu/topbar');
-					?>'
+					'<?= $topbar; ?>'
 				]
 			},
-			<?php
-			
-				$bottombar = elgg_view('mmenu/bottombar');
-				if (!empty($bottombar)) {
-					?>
+			<?php if (!empty($bottombar)) {	?>
 			{
 				"position": "bottom",
 				"content": [
-					'<?php echo $bottombar;	?>'
+					'<?= $bottombar; ?>'
 				]
 			}
-			<?php
-				}
-			?>
+			<?php } ?>
 		],
 		extensions: ["pagedim-black"],
 		hooks: [],
@@ -87,7 +85,7 @@ define(['jquery', 'elgg', 'jquery.mmenu/mmenu'], function ($, elgg) {
 		};
 	}
 			
-	var configuration = elgg.trigger_hook('config:configuration', 'mmenu', {}, {
+	var configuration = hooks.trigger('config:configuration', 'mmenu', {}, {
 		classNames: {
 			selected: 'elgg-state-selected'
 		},
