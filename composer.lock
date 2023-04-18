@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a0b207419eeb1b0e3e1310cb9bd89eee",
+    "content-hash": "c551fbdab9ce8d43a1c9052f8e029a42",
     "packages": [
         {
             "name": "bower-asset/mmenu",

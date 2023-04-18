@@ -1,29 +1,29 @@
 {
-	"name" : "coldtrick/mmenu",
-	"description" : "Replaces topbar site menu items with a mobile like sidebar menu",
-	"homepage" : "https://www.coldtrick.com",
-	"type" : "elgg-plugin",
-	"keywords" : [
+	"name": "coldtrick/mmenu",
+	"description": "Replaces topbar site menu items with a mobile like sidebar menu",
+	"homepage": "https://www.coldtrick.com",
+	"type": "elgg-plugin",
+	"keywords": [
 		"elgg",
 		"plugin",
 		"menu",
 		"theme"
 	],
-	"license" : "GPL-2.0-only",
-	"support" : {
-		"source" : "https://github.com/ColdTrick/mmenu",
-		"issues" : "https://github.com/ColdTrick/mmenu/issues"
+	"license": "GPL-2.0-only",
+	"support": {
+		"source": "https://github.com/ColdTrick/mmenu",
+		"issues": "https://github.com/ColdTrick/mmenu/issues"
 	},
-	"require" : {
-		"composer/installers" : "^1.0.8",
-		"bower-asset/mmenu" : "~8.5.0"
+	"require": {
+		"composer/installers": "^1.0.8",
+		"bower-asset/mmenu": "~8.5.0"
 	},
-	"conflict" : {
-		"elgg/elgg" : "<4.2"
+	"conflict": {
+		"elgg/elgg": "<5.0"
 	},
-	"repositories" : [{
-			"type" : "composer",
-			"url" : "https://asset-packagist.org"
+	"repositories": [{
+			"type": "composer",
+			"url": "https://asset-packagist.org"
 		}
 	],
 	"config": {
