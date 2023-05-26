@@ -25,7 +25,7 @@ return [
 		],
 		'register' => [
 			'menu:site' => [
-				'\ColdTrick\Mmenu\Menus::topbarToSite' => [],
+				'\ColdTrick\Mmenu\Menus\Site::topbarToSite' => [],
 			],
 		],
 		'view_vars' => [
