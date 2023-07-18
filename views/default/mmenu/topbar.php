@@ -1,11 +1,7 @@
 <?php
 
 $site = elgg_get_site_entity();
-$link = elgg_view('output/url', [
-	'href' => $site->getURL(),
-	'text' => $site->getDisplayName(),
-	'trusted' => true,
-]);
+$link = elgg_view_entity_url($site);
 
 $open = elgg_view_icon('chevron-right');
 $close = elgg_view_icon('chevron-left');
