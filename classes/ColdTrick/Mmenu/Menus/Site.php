@@ -17,10 +17,6 @@ class Site {
 	 * @return null|MenuItems
 	 */
 	public static function topbarToSite(\Elgg\Event $event): ?MenuItems {
-		if (!elgg_get_plugin_setting('topbar_to_site', 'mmenu')) {
-			return null;
-		}
-		
 		/* @var $result MenuItems */
 		$result = $event->getValue();
 		

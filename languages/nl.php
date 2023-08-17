@@ -6,5 +6,4 @@
 
 return array (
   'mmmenu:menu:topbar:toggle' => 'Schakel het site menu',
-  'mmenu:settings:topbar_to_site' => 'Verplaats topbar menu items naar het sitemenu',
 );

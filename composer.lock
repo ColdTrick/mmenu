@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c551fbdab9ce8d43a1c9052f8e029a42",
+    "content-hash": "04a72cfd12aee4ea80cf562142f23c82",
     "packages": [
         {
             "name": "bower-asset/mmenu",
-            "version": "v8.5.23",
+            "version": "v9.3.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:BeSite/jQuery.mmenu.git",
-                "reference": "fc73fd03ee015a13dab0e8a57a0f2ad56e7e548a"
+                "url": "https://github.com/FrDH/mmenu-js.git",
+                "reference": "17bea9b633b3ae55b80b12a672c1f20215296c5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BeSite/jQuery.mmenu/zipball/fc73fd03ee015a13dab0e8a57a0f2ad56e7e548a",
-                "reference": "fc73fd03ee015a13dab0e8a57a0f2ad56e7e548a"
+                "url": "https://api.github.com/repos/FrDH/mmenu-js/zipball/17bea9b633b3ae55b80b12a672c1f20215296c5c",
+                "reference": "17bea9b633b3ae55b80b12a672c1f20215296c5c"
             },
             "type": "bower-asset"
         },

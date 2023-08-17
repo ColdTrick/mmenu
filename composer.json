@@ -16,7 +16,7 @@
 	},
 	"require": {
 		"composer/installers": "^1.0.8",
-		"bower-asset/mmenu": "~8.5.0"
+		"bower-asset/mmenu": "~9.3.0"
 	},
 	"conflict": {
 		"elgg/elgg": "<5.0"

@@ -9,9 +9,6 @@ return [
 	'plugin' => [
 		'version' => '6.0.1',
 	],
-	'settings' => [
-		'topbar_to_site' => 0,
-	],
 	'actions' => [
 		'mmenu/save_menu_state' => [],
 	],
@@ -25,7 +22,7 @@ return [
 		],
 		'register' => [
 			'menu:site' => [
-				'\ColdTrick\Mmenu\Menus\Site::topbarToSite' => [],
+				'\ColdTrick\Mmenu\Menus\Site::topbarToSite' => ['priority' => 9999],
 			],
 		],
 		'view_vars' => [
@@ -42,9 +39,6 @@ return [
 	'view_extensions' => [
 		'elgg.css' => [
 			'jquery.mmenu/mmenu.css' => [],
-		],
-		'elements/z-index.css' => [
-			'mmenu/z-index.css' => [],
 		],
 		'jquery.mmenu/mmenu.css' => [
 			'navigation/menu/site.css' => [],

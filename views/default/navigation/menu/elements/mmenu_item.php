@@ -30,6 +30,7 @@ if (!empty($children)) {
 
 	$child_menu_vars = $item->getChildMenuOptions();
 	$child_menu_vars['id'] = $item->getId();
+	$child_menu_vars['data-mm-title'] = $item->getText();
 	$child_menu_vars['items'] = $children;
 	$child_menu_vars['class'] = elgg_extract_class($child_menu_vars, ['elgg-menu', 'elgg-child-menu']);
 
@@ -57,7 +58,6 @@ $item_vars['class'] = elgg_extract_class($vars, $item->getItemClass(), 'item_cla
 if ($item->getSelected()) {
 	$item_vars['class'][] = 'elgg-state-selected';
 }
-
 
 if ($child_menu_view && ($item->getHref() === false)) {
 	$item_vars['class'][] = 'elgg-anchor';
