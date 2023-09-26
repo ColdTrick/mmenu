@@ -70,6 +70,13 @@ define(['jquery', 'elgg', 'elgg/hooks', 'jquery.mmenu/mmenu'], function ($, elgg
 		],
 		hooks: {
 			'close:after': function() {
+				setTimeout(function() {
+					$menu_selector.trigger('mmenu.toggle');
+				}, 400);
+				
+				// close all open panels
+				this.API.openPanel(document.querySelector('#mm-1'));
+
 				var $menu = $(this.node.menu);
 				$menu.removeAttr('inert');
 				$menu.children().not('.mm-navbars--top').attr('inert', 'true');
@@ -77,6 +84,10 @@ define(['jquery', 'elgg', 'elgg/hooks', 'jquery.mmenu/mmenu'], function ($, elgg
 				saveMenuState();
 			},
 			'open:after': function() {
+				setTimeout(function() {
+					$menu_selector.trigger('mmenu.toggle');
+				}, 400);
+			
 				var $menu = $(this.node.menu);
 				$menu.children().removeAttr('inert');
 				
