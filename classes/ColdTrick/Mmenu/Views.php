@@ -22,8 +22,6 @@ class Views {
 		
 		if (elgg_get_plugin_user_setting('mmenu-closed', 0, 'mmenu', false)) {
 			$menu_classes[] = 'mm-wrapper--sidebar-closed';
-		} else {
-			$menu_classes[] = 'mm-wrapper--opened';
 		}
 		
 		$body_attrs = elgg_extract('body_attrs', $result, []);

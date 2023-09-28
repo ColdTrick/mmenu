@@ -103,6 +103,10 @@ html {
 	
 	&.mm-menu--sidebar-expanded {
 		border-right-width: 0px;
+		
+		&.mm-menu--opened {
+			z-index: 1;
+		}
 	}
 	
 	&:not(.mm-menu--opened) {
