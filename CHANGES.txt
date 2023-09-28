@@ -1,6 +1,10 @@
 Version history
 ===============
 
+6.1 (2023-09-28):
+
+- changed: updated mmenu library to v9.x
+
 6.0.1 (2023-07-26):
 
 - fixed: generate correct site url

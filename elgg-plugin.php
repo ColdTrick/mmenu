@@ -7,7 +7,7 @@ if (is_dir(__DIR__ . '/vendor')) {
 
 return [
 	'plugin' => [
-		'version' => '6.0.1',
+		'version' => '6.1',
 	],
 	'actions' => [
 		'mmenu/save_menu_state' => [],
