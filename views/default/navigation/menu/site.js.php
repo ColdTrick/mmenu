@@ -132,8 +132,12 @@ define(['jquery', 'elgg', 'elgg/hooks', 'jquery.mmenu/mmenu'], function ($, elgg
 		event.stopImmediatePropagation();
 	});
 	
-	$(document).on('mouseenter', '.elgg-menu-site-container', function(event) {
+	$(document).on('mouseenter click', '.elgg-menu-site-container', function(event) {
 		if (menuIsOpen() || $(event.target).is('.mmenu-toggle')) {
+			return;
+		}
+		
+		if (event.type === 'mouseenter' && 'ontouchstart' in document.documentElement) {
 			return;
 		}
 		

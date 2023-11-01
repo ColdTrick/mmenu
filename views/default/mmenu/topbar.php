@@ -9,7 +9,7 @@ $close = elgg_view_icon('chevron-left');
 $toggle = elgg_view('output/url', [
 	'text' => $open . $close,
 	'title' => elgg_echo('mmmenu:menu:topbar:toggle'),
-	'href' => '#elgg-mmenu',
+	'href' => false,
 	'class' => 'mmenu-toggle',
 ]);
 
