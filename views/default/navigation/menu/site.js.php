@@ -49,7 +49,8 @@ define(['jquery', 'elgg', 'elgg/hooks', 'jquery.mmenu/mmenu'], function ($, elgg
 				use: "(min-width: 700px)"
 			},
 			expanded: {
-				use: "(min-width: 900px)"
+				use: "(min-width: 900px)",
+				initial: $('body').hasClass('mm-wrapper--sidebar-closed') ? 'closed' : 'open'
 			}
 		},
 		navbars: [
@@ -142,6 +143,8 @@ define(['jquery', 'elgg', 'elgg/hooks', 'jquery.mmenu/mmenu'], function ($, elgg
 		}
 		
 		menu.API.open();
+		// restore local session state to closed as we do not want this persistent
+		window.sessionStorage.setItem('mmenuExpandedState', 'closed');
 		
 		$('.mm-slideout').on('mouseenter.mmenu', function() {
 			$(this).off('mouseenter.mmenu');

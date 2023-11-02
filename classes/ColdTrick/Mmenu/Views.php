@@ -17,9 +17,7 @@ class Views {
 	public static function addHtmlClasses(\Elgg\Event $event) {
 		$result = $event->getValue();
 				
-		$menu_classes = [];
 		$menu_classes = ['mm-wrapper--sidebar-expanded'];
-		
 		if (elgg_get_plugin_user_setting('mmenu-closed', 0, 'mmenu', false)) {
 			$menu_classes[] = 'mm-wrapper--sidebar-closed';
 		}
