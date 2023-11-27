@@ -145,10 +145,6 @@ html {
 	}
 }
 
-.mm-wrapper {
-	position: initial;
-}
-
 .mm-wrapper--sidebar-collapsed,
 .mm-wrapper--opened {
 	.mm-slideout:before {
@@ -168,13 +164,11 @@ html {
 	body:not(.mm-wrapper) {
 		&.mm-wrapper--sidebar-expanded > .elgg-page {
 			width: calc(100% - var(--mm-sidebar-expanded-size));
-			transform: unset;
-			float: right;
+			transform: translate3d(var(--mm-sidebar-expanded-size),0,0);
 		}
 		&.mm-wrapper--sidebar-closed > .elgg-page {
 			width: calc(100% - var(--mm-sidebar-collapsed-size));
-			transform: unset;
-			float: right;
+			transform: translate3d(var(--mm-sidebar-collapsed-size),0,0);
 		}
 	}
 }
@@ -182,8 +176,7 @@ html {
 @media screen and (min-width: 700px) {
 	body:not(.mm-wrapper--opening) > .elgg-page {
 		width: calc(100% - var(--mm-sidebar-collapsed-size));
-		transform: unset !important;
-		float: right;
+		transform: translate3d(var(--mm-sidebar-collapsed-size),0,0);
 	}
 }
 	
@@ -191,4 +184,9 @@ html {
 	.elgg-page-topbar .mmenu-toggle {
 		display: block !important;
 	}
+}
+
+/** CKEDITOR Drop Target Line fix */
+.ck-clipboard-drop-target-line {
+	z-index: 999;
 }
