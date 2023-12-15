@@ -160,15 +160,22 @@ html {
 	}
 }
 
+.ck.ck-sticky-panel .ck-sticky-panel__content_sticky {
+	/** fix to keep under site topbar*/
+	z-index: 10 !important;
+}
+
 @media screen and (min-width: 900px) {
 	body:not(.mm-wrapper) {
 		&.mm-wrapper--sidebar-expanded > .elgg-page {
 			width: calc(100% - var(--mm-sidebar-expanded-size));
-			transform: translate3d(var(--mm-sidebar-expanded-size),0,0);
+			float: right;
+			transform: unset !important;
 		}
 		&.mm-wrapper--sidebar-closed > .elgg-page {
 			width: calc(100% - var(--mm-sidebar-collapsed-size));
-			transform: translate3d(var(--mm-sidebar-collapsed-size),0,0);
+			float: right;
+			transform: unset !important;
 		}
 	}
 }
@@ -176,7 +183,8 @@ html {
 @media screen and (min-width: 700px) {
 	body:not(.mm-wrapper--opening) > .elgg-page {
 		width: calc(100% - var(--mm-sidebar-collapsed-size));
-		transform: translate3d(var(--mm-sidebar-collapsed-size),0,0);
+		float: right;
+		transform: unset !important;
 	}
 }
 	
@@ -187,6 +195,9 @@ html {
 }
 
 /** CKEDITOR Drop Target Line fix */
+.ck-body-wrapper {
+	clear: both;
+}
 .ck-clipboard-drop-target-line {
 	z-index: 999;
 }
