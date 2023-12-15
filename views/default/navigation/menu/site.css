@@ -160,6 +160,10 @@ html {
 	}
 }
 
+body {
+	display: flow-root;
+}
+
 .ck.ck-sticky-panel .ck-sticky-panel__content_sticky {
 	/** fix to keep under site topbar*/
 	z-index: 10 !important;
