@@ -1,6 +1,11 @@
 Version history
 ===============
 
+6.1.1 (2023-11-30):
+
+- fixed: correctly show/remember initial menu state
+- fixed: prevent double event handling on touch devices
+
 6.1 (2023-09-28):
 
 - changed: updated mmenu library to v9.x
