@@ -1,6 +1,10 @@
 Version history
 ===============
 
+6.1.2 (2024-01-12):
+
+- fixed: editor toolbar should keep a fixed position
+
 6.1.1 (2023-11-30):
 
 - fixed: correctly show/remember initial menu state
