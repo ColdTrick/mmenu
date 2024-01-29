@@ -106,6 +106,7 @@ html {
 		
 		&.mm-menu--opened {
 			z-index: 1;
+			overflow: hidden;
 		}
 	}
 	
