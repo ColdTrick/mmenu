@@ -110,6 +110,9 @@ define(['jquery', 'elgg', 'elgg/hooks', 'jquery.mmenu/mmenu'], function ($, elgg
 			selected: 'elgg-state-selected'
 		},
 		offCanvas: {
+			menu: {
+				insertMethod: 'prepend'
+			},
 			page: {
 				selector: 'body > .elgg-page'
 			}
