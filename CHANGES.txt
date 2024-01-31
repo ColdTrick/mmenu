@@ -1,6 +1,10 @@
 Version history
 ===============
 
+6.1.3 (2024-01-31):
+
+- several small chores/fixes
+
 6.1.2 (2024-01-12):
 
 - fixed: editor toolbar should keep a fixed position
