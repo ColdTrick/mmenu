@@ -19,10 +19,7 @@ $child_menu_view = '';
 
 $children = $item->getChildren();
 if (!empty($children)) {
-	$link_class = 'elgg-menu-closed';
-	if ($item->getSelected()) {
-		$link_class = 'elgg-menu-opened';
-	}
+	$link_class = $item->getSelected() ? 'elgg-menu-opened' : 'elgg-menu-closed';
 	
 	$item->addLinkClass($link_class);
 

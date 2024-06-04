@@ -33,7 +33,8 @@ return [
 	],
 	'views' => [
 		'default' => [
-			'jquery.mmenu/' => $composer_path . 'vendor/bower-asset/mmenu/dist',
+			'jquery.mmenu/mmenu.mjs' => $composer_path . 'vendor/bower-asset/mmenu/dist/mmenu.js',
+			'jquery.mmenu/mmenu.css' => $composer_path . 'vendor/bower-asset/mmenu/dist/mmenu.css',
 		],
 	],
 	'view_extensions' => [
@@ -45,6 +46,6 @@ return [
 		],
 	],
 	'view_options' => [
-		'navigation/menu/site.js' => ['simplecache' => true],
+		'navigation/menu/site.mjs' => ['simplecache' => true],
 	],
 ];

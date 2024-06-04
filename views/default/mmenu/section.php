@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Menu group
  *
@@ -10,6 +9,7 @@
  * @uses $vars['item_class']           Additional CSS class for each menu item
  * @uses $vars['show_section_headers'] Do we show headers for each section
  */
+
 $items = elgg_extract('items', $vars, []);
 unset($vars['items']);
 

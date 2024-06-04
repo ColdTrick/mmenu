@@ -13,7 +13,7 @@
 		"bower-asset/mmenu": "~9.3.0"
 	},
 	"conflict": {
-		"elgg/elgg": "<5.0"
+		"elgg/elgg": "<6.0"
 	},
 	"repositories": [{
 			"type": "composer",
