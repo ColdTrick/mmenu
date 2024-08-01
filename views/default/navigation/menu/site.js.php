@@ -155,4 +155,12 @@ define(['jquery', 'elgg', 'elgg/hooks', 'jquery.mmenu/mmenu'], function ($, elgg
 			menu.API.close();
 		});
 	});
+	
+	$menu_selector.on('click', '.mm-panels', function(event) {
+		if (!$(event.target).hasClass('mm-panels')) {
+			return;
+		}
+		
+		menu.API.openPanel($menu_selector.find('#mm-1')[0]);
+	});
 });
