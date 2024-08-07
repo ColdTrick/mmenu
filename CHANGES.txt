@@ -1,6 +1,10 @@
 Version history
 ===============
 
+6.2 (2024-08-07):
+
+- added: clicking on iconbar will open first level if submenu opened
+
 7.0 (2024-06-28):
 
 - changed: updated for Elgg 6

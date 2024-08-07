@@ -157,3 +157,11 @@ $(document).on('mouseenter click', '.elgg-menu-site-container', function(event) 
 		menu.API.close();
 	});
 });
+
+$menu_selector.on('click', '.mm-panels', function(event) {
+	if (!$(event.target).hasClass('mm-panels')) {
+		return;
+	}
+	
+	menu.API.openPanel($menu_selector.find('#mm-1')[0]);
+});
