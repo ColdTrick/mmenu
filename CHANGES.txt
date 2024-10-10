@@ -1,6 +1,10 @@
 Version history
 ===============
 
+7.0.1 (2024-10-10):
+
+- several small chores/fixes
+
 6.2 (2024-08-07):
 
 - added: clicking on iconbar will open first level if submenu opened
