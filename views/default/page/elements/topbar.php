@@ -7,6 +7,7 @@ echo elgg_view('output/url', [
 	'icon' => 'bars',
 	'text' => false,
 	'title' => elgg_echo('mmmenu:menu:topbar:toggle'),
+	'aria-label' => elgg_echo('mmmenu:menu:topbar:toggle'),
 	'href' => '#elgg-mmenu',
 	'class' => 'mmenu-toggle',
 ]);
