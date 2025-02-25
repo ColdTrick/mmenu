@@ -46,7 +46,7 @@ if (!empty($children)) {
 			break;
 	}
 
-	$child_menu_view = elgg_view('navigation/menu/elements/section', $child_menu_vars);
+	$child_menu_view = elgg_format_element('ul', $child_menu_vars, elgg_view('mmenu/section', $child_menu_vars));
 }
 
 $item_vars['data-menu-item'] = $item->getName();
