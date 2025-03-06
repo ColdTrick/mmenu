@@ -1,6 +1,10 @@
 Version history
 ===============
 
+7.0.3 (2025-03-06):
+
+- fixed: correctly show multilevel site menus
+
 7.0.2 (2025-02-12):
 
 - several small chores/fixes
