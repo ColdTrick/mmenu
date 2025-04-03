@@ -49,6 +49,15 @@ if (!empty($children)) {
 	$child_menu_view = elgg_format_element('ul', $child_menu_vars, elgg_view('mmenu/section', $child_menu_vars));
 }
 
+$deps = $item->getDeps();
+if (elgg_extract('data-toggle', $item->getValues())) {
+	$deps[] = 'navigation/menu/elements/item_toggle';
+}
+
+foreach ($deps as $module) {
+	elgg_import_esm($module);
+}
+
 $item_vars['data-menu-item'] = $item->getName();
 
 $item_vars['class'] = elgg_extract_class($vars, $item->getItemClass(), 'item_class');
