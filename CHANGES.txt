@@ -1,6 +1,10 @@
 Version history
 ===============
 
+7.0.4 (2025-04-16):
+
+- fixed: import esm deps for menu items
+
 7.0.3 (2025-03-06):
 
 - fixed: correctly show multilevel site menus
