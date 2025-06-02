@@ -102,6 +102,8 @@ var options = hooks.trigger('config:options', 'mmenu', {}, {
 				$menu.removeAttr('inert');
 				$menu.children().not('.mm-navbars--top').attr('inert', 'true');
 			}
+
+			$('.elgg-page-section.elgg-page-skiplink').insertBefore($menu_selector);
 		}
 	},
 });
