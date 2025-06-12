@@ -30,12 +30,12 @@ html {
 		width: 50px;
 		cursor: pointer;
 		
-		.elgg-icon-chevron-right {
-			display: none;
+		&.mmenu-toggle-close {
+			display: inline;
 		}
 		
-		.elgg-icon-chevron-left {
-			display: inline;
+		&.mmenu-toggle-open {
+			display: none;
 		}
 	}
 }
@@ -122,11 +122,11 @@ html {
 				border-left: none;
 				padding-left: 10px;
 				
-				.elgg-icon-chevron-right {
+				&.mmenu-toggle-open {
 					display: inline;
 				}
 				
-				.elgg-icon-chevron-left {
+				&.mmenu-toggle-close {
 					display: none;
 				}
 			}
