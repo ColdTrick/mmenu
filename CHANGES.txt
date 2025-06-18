@@ -1,6 +1,11 @@
 Version history
 ===============
 
+7.0.5 (2025-06-18):
+
+- fixed: move elgg skiplink before site menu
+- fixed: use separate links with tooltips to toggle the site menu
+
 7.0.4 (2025-04-16):
 
 - fixed: import esm deps for menu items
