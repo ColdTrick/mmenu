@@ -17,6 +17,10 @@ class Site {
 	 * @return null|MenuItems
 	 */
 	public static function topbarToSite(\Elgg\Event $event): ?MenuItems {
+		if (elgg_in_context('admin')) {
+			return null;
+		}
+
 		/* @var $result MenuItems */
 		$result = $event->getValue();
 		
