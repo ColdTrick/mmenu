@@ -1,6 +1,10 @@
 Version history
 ===============
 
+7.0.6 (2025-11-13):
+
+- fix: do not add topbar to site menu in admin context
+
 7.0.5 (2025-06-18):
 
 - fixed: move elgg skiplink before site menu
