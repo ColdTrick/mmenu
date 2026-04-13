@@ -13,6 +13,4 @@ echo elgg_view('output/url', [
 
 echo elgg_view_menu('site', ['menu_view' => 'mmenu/menu']);
 
-echo elgg_format_element('div', [
-	'class' => 'elgg-nav-search',
-], elgg_view('search/search_box'));
+echo elgg_format_element('div', ['class' => 'elgg-nav-search'], elgg_view('search/search_box'));

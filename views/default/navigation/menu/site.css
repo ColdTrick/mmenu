@@ -7,10 +7,12 @@ html {
 	overflow-y: unset;
 }
 
-.elgg-page-topbar {
-	.elgg-menu-site-container {
-		display: none;
-	}
+.mm-panels {
+	--mm-color-background: var(--elgg-body-background-color);
+	--mm-color-border: var(--elgg-border-color-soft);
+	--mm-color-text: var(--elgg-text-color-strong);
+	--mm-color-icon: var(--elgg-text-color-strong);
+	--mm-color-background-emphasis: var(--elgg-background-color-soft);
 }
 
 .mmenu-topbar {
@@ -24,7 +26,7 @@ html {
 	}
 	
 	.mmenu-toggle {
-		border-left: 1px solid #CCC;
+		border-left: 1px solid var(--elgg-border-color-mild);
 		flex-grow: 0;
 		color: white;
 		width: 50px;
@@ -40,11 +42,17 @@ html {
 	}
 }
 
-.elgg-page-topbar .mmenu-toggle {
-	margin-right: auto;
-	padding-left: 1rem;
+.elgg-page-topbar {
+	.elgg-menu-site-container {
+		display: none;
+	}
+	
+	.mmenu-toggle {
+		margin-right: auto;
+		padding-left: 1rem;
 		
-	display: none;
+		display: none;
+	}
 }
 
 .mm-listitem:after {
@@ -52,6 +60,8 @@ html {
 }
 
 .elgg-menu-site-container {
+	gap: 0;
+	
 	li {
 		.elgg-anchor > * {
 			vertical-align: middle;
@@ -63,12 +73,12 @@ html {
 	}
 	
 	.mm-navbar > a {
-		color: rgb(0 0 0 / 80%);
+		color: var(--elgg-text-color-strong);
 	}
 	
 	.mm-navbars--top {
-		border-bottom-color: $(topbar-background-color, $(background-color-highlight));
-		background: $(topbar-background-color, $(background-color-highlight));
+		border-bottom-color: var(--elgg-topbar-background-color);
+		background: var(--elgg-topbar-background-color);
 			
 		.mm-navbar {
 			background: none;
