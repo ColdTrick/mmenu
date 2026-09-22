@@ -21,7 +21,7 @@ class Site {
 			return null;
 		}
 
-		/* @var $result MenuItems */
+		/** @var MenuItems $result */
 		$result = $event->getValue();
 		
 		$menu = _elgg_services()->menus->getUnpreparedMenu('topbar');
